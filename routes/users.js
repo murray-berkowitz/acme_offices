@@ -17,5 +17,17 @@ router.get('/', function(req,res,next){
         })
 })
 
+router.delete('/:id',function(req,res,next){
+    var user = req.params.id;
+    User.destroy({
+        where: {
+            id: user
+        }
+    })
+     .then(function(result){
+         return res.send(result);
+     })
+})
+
 
 module.exports = router;
