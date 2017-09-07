@@ -22,9 +22,13 @@ db.sync()
 app.use(function(err,req,res,next){
     res.rendor('error',{err})
 })
-
 app.use(require('method-override')('_method'));
 app.use(urlencoded);
+app.get('/', function(req,res,next){
+    res.render('index');
+})
 app.use('/users', userRoute);
 app.use('/office', officeRoute);
 app.use(express.static('public'));
+app.use(express.static('source'));
+app.use('/jquery', express.static(require('path').join(__dirname, 'node_modules/jquery/dist')));

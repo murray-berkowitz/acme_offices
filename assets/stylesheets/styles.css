@@ -1,0 +1,22 @@
+.span6 {
+  width: 49.5%;
+  float: left;
+}
+
+.span12 {
+  width: 100%;
+  float: left;
+}
+
+.col {
+  margin-left: 1%;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.users p, .offices p {
+  font-weight: bold;
+}

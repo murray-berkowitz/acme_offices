@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/styles.css">
+    <script src="../jquery/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBv_CdD5IP0BjlnRZt1HuWQz22Tlc4uDwM&libraries=places"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="span12">
+            <div class="span6 users">
+                <h2>Users</h2>
+                <div class="span12 user-input">
+                    <p>Name</p>
+                    <input type="text" name="user">
+                    <a href="#" class="submit userSubmit">Submit</a>
+                </div>
+                <div class="user-list span12">
+
+                </div>
+            </div>
+            <div class="span6 col offices">
+                <h2>Offices</h2>
+                <div class="span12 office-input">
+                    <p>Location</p>
+                    <input type="text" name="office" id='pac-input'>
+                    <a href="#" class="submit officeSubmit">Submit</a>
+                    <div class="office-list span12">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='../js/UserForm.js'></script>
+    <script src='../js/UsersList.js'></script>
+    <script src='../js/OfficeForm.js'></script>
+    <script src='../js/OfficeList.js'></script>
+    <script src='../js/app.js'></script>
+</body>
+</html>
