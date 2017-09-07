@@ -3,9 +3,9 @@ var Office = require('../db/office');
 
 router.get('/', function(req,res,next){
     Office.findAll()
-        .then(function(result){
-            res.render('index', {offices:result})
-        }).catch(res.send(err));
+    .then(function(result){
+        return res.send(result);
+    })
 })
 
 router.post('/',function(req,res,next){

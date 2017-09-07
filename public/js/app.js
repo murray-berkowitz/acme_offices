@@ -6,4 +6,5 @@
         officeForm(place);
     });
     renderUserList();
+    renderOfficeList();
 })()
