@@ -7,14 +7,12 @@ $('.userSubmit').click(function(e){
         })
 })
 
-$(window).on('click', '.userDelete', function(e){
+$('body').on('click', 'a.userDelete', function(e){
     var userId = $(this).attr('data-delete-value');
-    alert('clicked', userId);
+    $(`.userCont[data-userid-value = ${userId}]`).remove();
     $.ajax({
         url: `/users/${userId}`,
-        type: 'DELETE',
-        success: function(result) {
-            $(`[data-delete-value = '${userId}']`).remove();
-        }
+        dataType: 'json',
+        type: 'DELETE'
     })
 })

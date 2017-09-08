@@ -8,4 +8,5 @@ function renderOfficeList(){
 }
 function addOffice(office){
     $('.office-list').append(`<p>${office.name}<br/>${office.lat} ${office.lng}</p>`);
+    renderOfficeDropdown();
 }
